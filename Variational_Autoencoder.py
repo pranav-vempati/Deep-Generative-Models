@@ -135,6 +135,8 @@ vae.compile(loss = vae_loss, optimizer = 'rmsprop', metrics = ['accuracy'])
 
 vae.fit(x_train, epochs = 120, batch_size = 64, validation_data = (x_test,y_test))
 
+# Implementation inspired by: https://github.com/keras-team/keras/blob/master/examples/variational_autoencoder.py
+
 
 
 
