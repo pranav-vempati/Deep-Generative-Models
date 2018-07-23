@@ -139,7 +139,7 @@ if ___name____ == 'main': # If script is explicitly executed
 	deep_conv_gan.train(epochs = 7000, batch_size = 64, save_model = 100)
 
 
-# Implementation heavily inspired by: https://github.com/eriklindernoren/Keras-GAN/blob/master/dcgan/dcgan.py
+# Implementation inspired by: https://github.com/eriklindernoren/Keras-GAN/blob/master/dcgan/dcgan.py
 
 
 
