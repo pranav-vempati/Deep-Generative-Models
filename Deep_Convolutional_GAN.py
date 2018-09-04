@@ -29,12 +29,12 @@ class Deep_Convolutional_GAN():
 
 		validity = self.discriminator(generated_image)
 
-		# Now we build the adverserial network by combining the Generator and Discriminator networks
+		# Now we build the adversarial network by combining the Generator and Discriminator networks
 		self.combined =  Model(latent_noise, validity)
 		self.combined.compile(loss = 'binary_crossentropy', optimizer = opt)
 
 
-    def create_generator_network(self): # Deconvolutional(or alternatively, transposed convolutional) network - maps Gaussian noise to fully rendered images intended to 
+    def create_generator_network(self): # Deconvolutional(or alternatively, transposed convolutional) network performing spatial upsampling on latent noise to construct a synthetic image. 
     	model = Sequential()
     	model.add(Dense(128*7*7), activation = 'relu', input_dim = self.latent_dim)
     	model.add(Reshape(7.7.128)) # Values configured for MNIST digits
